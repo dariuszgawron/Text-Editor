@@ -41,6 +41,12 @@ body {
     cursor: pointer;
 }
 
+.toolbar__select {
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+}
+
 .content {
     padding: 10px;
 }

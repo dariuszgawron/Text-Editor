@@ -15,13 +15,35 @@
         </h1>
         <div class="toolbar">
             <fieldset class="toolbar__row">
+
                 <div class="toolbar__group toolbar__group--separator">
-                    <select class="toolbar__btn">
-                        <option value="Arial">Arial</option>
-                    </select>
-                    <button class="toolbar__btn toolbar__btn--size">
-        
+                    <button class="toolbar__btn" name="copy" title="Copy">
+                        <i class="far fa-copy"></i>
                     </button>
+                    <button class="toolbar__btn" name="paste" title="Paste">
+                        <i class="far fa-clipboard"></i>
+                    </button>
+                    <button class="toolbar__btn" name="cut" title="Cut">
+                        <i class="fas fa-cut"></i>
+                    </button>
+                </div>
+
+                <div class="toolbar__group toolbar__group--separator">
+                    <select class="toolbar__select" name="name" title="Name">
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Palatino">Palatino</option>
+                    </select>
+                    <select class="toolbar__select" name="size" title="Size">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3" selected>3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
                     <button class="toolbar__btn" name="bold" title="Bold">
                         <i class="fas fa-bold"></i>
                     </button>
@@ -31,11 +53,27 @@
                     <button class="toolbar__btn" name="underline" title="Underline">
                         <i class="fas fa-underline"></i>
                     </button>
-                    <input type="color" class="toolbar__btn">
+                    <button class="toolbar__btn" name="strike" title="Strike">
+                        <i class="fas fa-strikethrough"></i>
+                    </button>
+                    <button class="toolbar__btn" name="subscript" title="Subscript">
+                        <i class="fas fa-subscript"></i>
+                    </button>
+                    <button class="toolbar__btn" name="superscript" title="Superscript">
+                        <i class="fas fa-superscript"></i>
+                    </button>
+                    <input class="toolbar__btn" type="color" name="color" title="Color">
         
                     </button>
                 </div>
                 <div class="toolbar__group toolbar__group--separator">
+                    
+                    <button class="toolbar__btn" name="outdent" title="Outdent">
+                        <i class="fas fa-outdent"></i>
+                    </button>
+                    <button class="toolbar__btn" name="indent" title="Indent">
+                        <i class="fas fa-indent"></i>
+                    </button>
                     <button class="toolbar__btn" name="align-left" title="Align left">
                         <i class="fas fa-align-left"></i>
                     </button>
@@ -45,6 +83,9 @@
                     <button class="toolbar__btn" name="align-right" title="Align right">
                         <i class="fas fa-align-right"></i>
                     </button>
+                    <button class="toolbar__btn" name="align-justify" title="Align justify">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
                 </div>
                 <div class="toolbar__group">
                     <button class="toolbar__btn" name="ordered-list" title="Ordered list">
@@ -53,7 +94,11 @@
                     <button class="toolbar__btn" name="unordered-list" title="Unordered list">
                         <i class="fas fa-list-ul"></i>
                     </button>
+                    <button class="toolbar__btn" name="remove-format" title="Remove format">
+                        <i class="fas fa-eraser"></i>
+                    </button>
                 </div>
+                
                 
                 
             </fieldset>

@@ -5,15 +5,23 @@
 }
 
 body {
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(238, 238, 238);
 }
 
 .main {
-    padding: 10px;
+    /* padding: 10px; */
 }
 
-.main__title {
+.header {
+    
+    box-shadow: 0px 11px 63px -41px rgba(66, 68, 90, 1);
+}
 
+.header__title {
+    padding: 15px 0 5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(73, 173, 255);
 }
 
 .toolbar {
@@ -32,7 +40,7 @@ body {
     border-right: 1px solid rgb(184, 184, 184);
 }
 
-.toolbar__btn {
+.toolbar-button {
     width: 30px;
     height: 30px;
     padding: 6px;
@@ -41,20 +49,34 @@ body {
     cursor: pointer;
 }
 
-.toolbar__select {
-    width: 100px;
+.toolbar-button:hover {
+    border: 1px solid rgb(149, 207, 255);
+}
+
+.toolbar-select {
+    min-width: 40px;
+    max-width: 120px;
     height: 30px;
     border-radius: 5px;
+    background-color: rgba(228, 228, 228, 1);
 }
 
 .content {
-    padding: 10px;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
 }
 
 .content__editor {
-    width: 100%;
-    height: 50vh;
+    width: 90%;
+    /* height: 60vh; */
+    height: 500px;
     padding: 10px;
     background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(184, 184, 184);
+    border: 6px solid rgb(149, 207, 255);
+    box-shadow: 0 0 20px rgb(184, 184, 184);
+}
+
+.content__editor:focus {
+    outline: none;
 }

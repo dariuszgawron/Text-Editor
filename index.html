@@ -1,113 +1,123 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Text editor</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <div class="main">
-        <h1 class="main__title">
+        <header class="header">
+            <h1 class="header__title">
+                Text editor
+            </h1>
+            <div class="toolbar">
+                <fieldset class="toolbar__row">
 
-        </h1>
-        <div class="toolbar">
-            <fieldset class="toolbar__row">
+                    <div class="toolbar__group toolbar__group--separator">
+                        <button class="toolbar-button" name="undo" title="Undo">
+                            <i class="toolbar-button--icon  fas fa-undo"></i>
+                        </button>
+                        <button class="toolbar-button" name="redo" title="Redo">
+                            <i class="toolbar-button--icon  fas fa-redo"></i>
+                        </button>
+                    </div>
 
-                <div class="toolbar__group toolbar__group--separator">
-                    <button class="toolbar__btn" name="copy" title="Copy">
-                        <i class="far fa-copy"></i>
-                    </button>
-                    <button class="toolbar__btn" name="paste" title="Paste">
-                        <i class="far fa-clipboard"></i>
-                    </button>
-                    <button class="toolbar__btn" name="cut" title="Cut">
-                        <i class="fas fa-cut"></i>
-                    </button>
-                </div>
+                    <div class="toolbar__group toolbar__group--separator">
+                        <button class="toolbar-button" name="copy" title="Copy">
+                            <i class="toolbar-button--icon far fa-copy"></i>
+                        </button>
+                        <button class="toolbar-button" name="paste" title="Paste">
+                            <i class="toolbar-button--icon far fa-clipboard"></i>
+                        </button>
+                        <button class="toolbar-button" name="cut" title="Cut">
+                            <i class="toolbar-button--icon fas fa-cut"></i>
+                        </button>
+                    </div>
 
-                <div class="toolbar__group toolbar__group--separator">
-                    <select class="toolbar__select" name="name" title="Name">
-                        <option value="Times New Roman">Times New Roman</option>
-                        <option value="Arial">Arial</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Palatino">Palatino</option>
-                    </select>
-                    <select class="toolbar__select" name="size" title="Size">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3" selected>3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                    </select>
-                    <button class="toolbar__btn" name="bold" title="Bold">
-                        <i class="fas fa-bold"></i>
-                    </button>
-                    <button class="toolbar__btn" name="italic" title="Italic">
-                        <i class="fas fa-italic"></i>
-                    </button>
-                    <button class="toolbar__btn" name="underline" title="Underline">
-                        <i class="fas fa-underline"></i>
-                    </button>
-                    <button class="toolbar__btn" name="strike" title="Strike">
-                        <i class="fas fa-strikethrough"></i>
-                    </button>
-                    <button class="toolbar__btn" name="subscript" title="Subscript">
-                        <i class="fas fa-subscript"></i>
-                    </button>
-                    <button class="toolbar__btn" name="superscript" title="Superscript">
-                        <i class="fas fa-superscript"></i>
-                    </button>
-                    <input class="toolbar__btn" type="color" name="color" title="Color">
-        
-                    </button>
-                </div>
-                <div class="toolbar__group toolbar__group--separator">
-                    
-                    <button class="toolbar__btn" name="outdent" title="Outdent">
-                        <i class="fas fa-outdent"></i>
-                    </button>
-                    <button class="toolbar__btn" name="indent" title="Indent">
-                        <i class="fas fa-indent"></i>
-                    </button>
-                    <button class="toolbar__btn" name="align-left" title="Align left">
-                        <i class="fas fa-align-left"></i>
-                    </button>
-                    <button class="toolbar__btn" name="align-center" title="Align center">
-                        <i class="fas fa-align-center"></i>
-                    </button>
-                    <button class="toolbar__btn" name="align-right" title="Align right">
-                        <i class="fas fa-align-right"></i>
-                    </button>
-                    <button class="toolbar__btn" name="align-justify" title="Align justify">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-                </div>
-                <div class="toolbar__group">
-                    <button class="toolbar__btn" name="ordered-list" title="Ordered list">
-                        <i class="fas fa-list-ol"></i>
-                    </button>
-                    <button class="toolbar__btn" name="unordered-list" title="Unordered list">
-                        <i class="fas fa-list-ul"></i>
-                    </button>
-                    <button class="toolbar__btn" name="remove-format" title="Remove format">
-                        <i class="fas fa-eraser"></i>
-                    </button>
-                </div>
-                
-                
-                
-            </fieldset>
-        </div> 
+                    <div class="toolbar__group toolbar__group--separator">
+                        <select class="toolbar-select" name="name" title="Name">
+
+                        </select>
+                        <select class="toolbar-select" name="size" title="Size">
+                            <option class="toolbar-select__option" value="1">1</option>
+                            <option class="toolbar-select__option" value="2">2</option>
+                            <option class="toolbar-select__option" value="3" selected>3</option>
+                            <option class="toolbar-select__option" value="4">4</option>
+                            <option class="toolbar-select__option" value="5">5</option>
+                            <option class="toolbar-select__option" value="6">6</option>
+                            <option class="toolbar-select__option" value="7">7</option>
+                        </select>
+                        <button class="toolbar-button" name="bold" title="Bold">
+                            <i class="toolbar-button--icon fas fa-bold"></i>
+                        </button>
+                        <button class="toolbar-button" name="italic" title="Italic">
+                            <i class="toolbar-button--icon fas fa-italic"></i>
+                        </button>
+                        <button class="toolbar-button" name="underline" title="Underline">
+                            <i class="toolbar-button--icon fas fa-underline"></i>
+                        </button>
+                        <button class="toolbar-button" name="strike" title="Strike">
+                            <i class="toolbar-button--icon fas fa-strikethrough"></i>
+                        </button>
+                        <button class="toolbar-button" name="subscript" title="Subscript">
+                            <i class="toolbar-button--icon fas fa-subscript"></i>
+                        </button>
+                        <button class="toolbar-button" name="superscript" title="Superscript">
+                            <i class="toolbar-button--icon fas fa-superscript"></i>
+                        </button>
+                        <input class="toolbar-button" type="color" name="color" title="Color">
+
+                        </button>
+                    </div>
+                    <div class="toolbar__group toolbar__group--separator">
+
+                        <button class="toolbar-button" name="outdent" title="Outdent">
+                            <i class="toolbar-button--icon fas fa-outdent"></i>
+                        </button>
+                        <button class="toolbar-button" name="indent" title="Indent">
+                            <i class="toolbar-button--icon fas fa-indent"></i>
+                        </button>
+                        <button class="toolbar-button" name="align-left" title="Align left">
+                            <i class="toolbar-button--icon fas fa-align-left"></i>
+                        </button>
+                        <button class="toolbar-button" name="align-center" title="Align center">
+                            <i class="toolbar-button--icon fas fa-align-center"></i>
+                        </button>
+                        <button class="toolbar-button" name="align-right" title="Align right">
+                            <i class="toolbar-button--icon fas fa-align-right"></i>
+                        </button>
+                        <button class="toolbar-button" name="align-justify" title="Align justify">
+                            <i class="toolbar-button--icon fas fa-align-justify"></i>
+                        </button>
+                    </div>
+                    <div class="toolbar__group">
+                        <button class="toolbar-button" name="ordered-list" title="Ordered list">
+                            <i class="toolbar-button--icon fas fa-list-ol"></i>
+                        </button>
+                        <button class="toolbar-button" name="unordered-list" title="Unordered list">
+                            <i class="toolbar-button--icon fas fa-list-ul"></i>
+                        </button>
+                        <button class="toolbar-button" name="remove-format" title="Remove format">
+                            <i class="toolbar-button--icon fas fa-eraser"></i>
+                        </button>
+                    </div>
+                </fieldset>
+            </div>
+        </header>
         <div class="content">
             <div class="content__editor" contenteditable="true" data-text="Enter text here"></div>
         </div>
-        
+
     </div>
     <script src="./js/script.js"></script>
 </body>
+
 </html>

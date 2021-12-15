@@ -15,7 +15,8 @@ const underlineBtn = document.querySelector('.toolbar-button[name=underline]');
 const strikeBtn = document.querySelector('.toolbar-button[name=strike]');
 const subscriptBtn = document.querySelector('.toolbar-button[name=subscript]');
 const superscriptBtn = document.querySelector('.toolbar-button[name=superscript]');
-const colorBtn = document.querySelector('.toolbar-button[name=color]');
+const colorBtn = document.querySelector('.toolbar-input[name=color]');
+const removeFormatBtn = document.querySelector('.toolbar-button[name=remove-format]');
 
 const outdentBtn = document.querySelector('.toolbar-button[name=outdent]');
 const indentBtn = document.querySelector('.toolbar-button[name=indent]');
@@ -25,8 +26,6 @@ const alignRightBtn = document.querySelector('.toolbar-button[name=align-right]'
 const alignJustifyBtn = document.querySelector('.toolbar-button[name=align-justify]');
 const orderedListBtn = document.querySelector('.toolbar-button[name=ordered-list]');
 const unorderedListBtn = document.querySelector('.toolbar-button[name=unordered-list]');
-
-const removeFormatBtn = document.querySelector('.toolbar-button[name=remove-format]');
 
 const listOfFonts = ["Times New Roman","Arial","Georgia","Palatino","Calibri"];
 
@@ -59,7 +58,7 @@ undoBtn.addEventListener('click', () => changeText('undo'));
 redoBtn.addEventListener('click', () => changeText('redo'));
 
 copyBtn.addEventListener('click', () => changeText('copy'));
-pasteBtn.addEventListener('click', () => changeText('paste'));
+pasteBtn.addEventListener('click', () => changeText('Paste'));
 cutBtn.addEventListener('click', () => changeText('cut'));
 
 nameBtn.addEventListener('change', (e) => changeText('fontName',false,e.target.value));

@@ -19,7 +19,7 @@
                 Text editor
             </h1>
             <div class="toolbar">
-                <fieldset class="toolbar__row">
+                <div class="toolbar__row">
 
                     <div class="toolbar__group toolbar__group--separator">
                         <button class="toolbar-button" name="undo" title="Undo">
@@ -73,8 +73,9 @@
                         <button class="toolbar-button" name="superscript" title="Superscript">
                             <i class="toolbar-button--icon fas fa-superscript"></i>
                         </button>
-                        <input class="toolbar-button" type="color" name="color" title="Color">
-
+                        <input class="toolbar-input" type="color" name="color" title="Color">
+                        <button class="toolbar-button" name="remove-format" title="Remove format">
+                            <i class="toolbar-button--icon fas fa-eraser"></i>
                         </button>
                     </div>
                     <div class="toolbar__group toolbar__group--separator">
@@ -105,11 +106,8 @@
                         <button class="toolbar-button" name="unordered-list" title="Unordered list">
                             <i class="toolbar-button--icon fas fa-list-ul"></i>
                         </button>
-                        <button class="toolbar-button" name="remove-format" title="Remove format">
-                            <i class="toolbar-button--icon fas fa-eraser"></i>
-                        </button>
                     </div>
-                </fieldset>
+                </div>
             </div>
         </header>
         <div class="content">

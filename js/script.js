@@ -47,8 +47,6 @@ function addItemsToList(list, items, selectedItem) {
 }
 
 window.onload = () => {
-    // const detective = new Detector();
-    // detective.detect('font name');
     const fontName = getStyleValue(textArea,'font-family');
     addItemsToList(nameBtn,listOfFonts, fontName);
     textArea.focus();
